@@ -9,21 +9,21 @@ public class Excelread
 	static XSSFSheet sh;
 public static String readStringData(int row,int colom)
 {
-	f=new FileInputStream("");
+	f=new FileInputStream("C:\\Users\\User\\Desktop\\java excel.xlsx");
 	w=new XSSFWorkbook(f);
-	sh=w.getSheet("");
+	sh=w.getSheet("Sheet1");
 	XSSFRow r=sh.getRow();
 	XSSFCell c=r.getCell();
 	return c.getStringCellValue;
 }
 public static String readIntegerData(int row,int colom)
 {
-	f=new FileInputStream("");
+	f=new FileInputStream("C:\\Users\\User\\Desktop\\java excel.xlsx");
 	w=new XSSFWorkbook(f);
-	sh=w.getSheet("");
+	sh=w.getSheet("Sheet1");
 	XSSFRow r=sh.getRow();
 	XSSFCell c=r.getCell();
-	int val=c.getNumericCellValue;
+	int val=(int)c.getNumericCellValue;
 	return String.valueOf(val);
 			
 	
